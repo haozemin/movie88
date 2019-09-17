@@ -11,11 +11,11 @@
 <meta name="description" content="88影视网每天搜集互联网最新电影和电视剧，为广大用户免费提供无广告在线观看电影和电视剧服务，及时收录最新、最热、最全的电影大片,高清正版免费看。" />
 <meta name="mobile-agent" content="format=html5;url=https://m.88ys.cc/" />
 <link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.88ys.cc/" />
-<link rel="stylesheet" type="text/css" href="/template/pc88ysw/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/style.css" />
 <script>var SitePath='/',SiteAid='10',SiteTid='',SiteId='';</script>
-<script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.4.4/jquery.min.js"></script>
-<script type="text/javascript" src="/template/pc88ysw/js/common.js"></script>
-<script type="text/javascript" src="/template/pc88ysw/js/homeindex.js"></script>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/js/homeindex.js"></script>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="/template/pc88ysw/js/html5shiv.min.js"></script>
 <script type="text/javascript" src="/template/pc88ysw/js/respond.min.js"></script>
@@ -24,26 +24,21 @@
 <body>
 <div class="header-all">
   <div class="top clearfix">
-    <ul class="logo"><a href="https://www.88ys.cc/" target="_self"><img src="/template/pc88ysw/Images/logo.png" alt="88影视网"></a></ul>
+    <ul class="logo"><a href="https://www.88ys.cc/" target="_self"><img src="/static/images/logo.png" alt="88影视网"></a></ul>
     <ul class="top-nav">
       <li><a href="https://www.88ys.cc/" title="首页" class="on" class="now" target="_self">首页</a></li>
 
-      <li class="" _t_nav="topnav-1"><a href="https://www.88ys.cc/vod-type-id-1-pg-1.html" title="电影" target="_self">电影<i class="sjbgs"></i><i class="sjbgx"></i></a></li>
-
-      <li class="" _t_nav="topnav-2"><a href="https://www.88ys.cc/vod-type-id-2-pg-1.html" title="电视剧" target="_self">电视剧<i class="sjbgs"></i><i class="sjbgx"></i></a></li>
-
-      <li class="" _t_nav="topnav-3"><a href="https://www.88ys.cc/vod-type-id-3-pg-1.html" title="综艺" target="_self">综艺<i class="sjbgs"></i><i class="sjbgx"></i></a></li>
-
-      <li class="" _t_nav="topnav-4"><a href="https://www.88ys.cc/vod-type-id-4-pg-1.html" title="动漫" target="_self">动漫<i class="sjbgs"></i><i class="sjbgx"></i></a></li>
-
-<li><a href="https://www.88ys.cc/zhibo.html" title="电视直播" target="_self">电视直播</a></li>
-<li><a href="https://www.88ys.cc/gbook-show-pg-1.html" title="求片留言" target="_self">求片留言</a></li>
+    {% for bc in bcs %}
+      <li class="" _t_nav="topnav-{{ bc.cid }}"><a href="https://www.88ys.cc/vod-type-id-1-pg-1.html" title="{{ bc.cname }}" target="_self">{{ bc.cname }}<i class="sjbgs"></i><i class="sjbgx"></i></a></li>
+    {% endfor %}
+{#<li><a href="https://www.88ys.cc/zhibo.html" title="电视直播" target="_self">电视直播</a></li>#}
+{#<li><a href="https://www.88ys.cc/gbook-show-pg-1.html" title="求片留言" target="_self">求片留言</a></li>#}
     </ul>
 	    <ul class="search so">
 <form action="/index.php?m=vod-search" method="post">
         <input type="text" id="wd" name="wd" class="input" onblur="if(this.value==''){ this.value='请输入影片或演员名';this.style.color='#cfcdcd';}" onfocus="if(this.value=='请输入影片或演员名'){this.value='';this.style.color='';}" value="请输入影片或演员名" />
         <input type="submit" name="submit" class="imgbt" value="" />
-      </form>
+</form>
     </ul>
     <ul class="nav-qt aa">
 <style>#history_box{left:-60px!important}</style>
@@ -52,70 +47,18 @@
 <ul class="sj-navhome">请把浏览器模式改成手机模式,以免影响正常观看！</ul>
 </div>
 <div class="nav-down clearfix">
-<div id="topnav-1" class="nav-down-1" style="display:none;" _t_nav="topnav-1">
+
+
+{% for bc in bcs %}
+<div id="topnav-{{ bc.cid }}" class="nav-down-1" style="display:none;" _t_nav="topnav-{{ bc.cid }}">
 <div class="nav-down-2 clearfix"><ul>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-5-pg-1.html" title="动作片" target="_self">动作片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-6-pg-1.html" title="喜剧片" target="_self">喜剧片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-7-pg-1.html" title="爱情片" target="_self">爱情片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-8-pg-1.html" title="科幻片" target="_self">科幻片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-9-pg-1.html" title="恐怖片" target="_self">恐怖片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-10-pg-1.html" title="剧情片" target="_self">剧情片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-11-pg-1.html" title="战争片" target="_self">战争片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-17-pg-1.html" title="纪录片" target="_self">纪录片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-18-pg-1.html" title="冒险片" target="_self">冒险片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-19-pg-1.html" title="悬疑片" target="_self">悬疑片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-20-pg-1.html" title="犯罪片" target="_self">犯罪片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-26-pg-1.html" title="惊悚片" target="_self">惊悚片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-27-pg-1.html" title="动画片" target="_self">动画片</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-16-pg-1.html" title="微电影" target="_self">微电影</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-25-pg-1.html" title="其他片" target="_self">其他片</a></li>
-
+        {% for sc in scs  %}
+            {% ifequal bc.cid sc.parentid %}
+                <li><a href="https://www.88ys.cc/vod-type-id-5-pg-1.html" title="{{ sc.cname }}" target="_self">{{ sc.cname }}</a></li>
+            {% endifequal %}
+        {% endfor %}
 </ul></div></div>
-<div id="topnav-2" class="nav-down-1" style="display:none;" _t_nav="topnav-2">
-<div class="nav-down-2 clearfix">
-<ul>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-12-pg-1.html" title="国产剧" target="_self">国产剧</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-13-pg-1.html" title="港台剧" target="_self">港台剧</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-14-pg-1.html" title="日韩剧" target="_self">日韩剧</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-15-pg-1.html" title="欧美剧" target="_self">欧美剧</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-29-pg-1.html" title="其他剧" target="_self">其他剧</a></li>
-
-</ul></div></div><div id="topnav-3" class="nav-down-1" style="display:none;" _t_nav="topnav-3">
-<div class="nav-down-2 clearfix"><ul>
-
-</ul></div></div>
-<div id="topnav-4" class="nav-down-1" style="display:none;" _t_nav="topnav-4">
-<div class="nav-down-2 clearfix"><ul>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-30-pg-1.html" title="国产动漫" target="_self">国产动漫</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-31-pg-1.html" title="日本动漫" target="_self">日本动漫</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-32-pg-1.html" title="欧美动漫" target="_self">欧美动漫</a></li>
-
-      <li><a href="https://www.88ys.cc/vod-type-id-33-pg-1.html" title="其他动漫" target="_self">其他动漫</a></li>
-
-</ul></div></div>
+{% endfor %}
 <div id="topnav-5" class="nav-down-1" style="display:none;" _t_nav="topnav-5">
 <div class="nav-down-2 clearfix"><ul>
 
@@ -139,14 +82,14 @@
 
       <li><a href="https://www.88ys.cc/vod-type-id-4-pg-1.html" title="动漫" target="_self">动漫</a></li>
 
-        </ul>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div class="topone clearfix"></div>
 <div class="leaveNavInfo">
-<script src="/template/pc88ysw/ads/quanzhantonglan.js"></script>
+<script src="/static/js/quanzhantonglan.js"></script>
 </div>
 <div class="channel-hide">
 <div class="Tag_item" id="tv-directory">
@@ -156,7 +99,7 @@
 <h2 class="title index-color clearfix">最新热门影片推荐</h2>
 <ul>
 
-    <li class="p2 m1  "><a href="/guochanju/201908/64995.html" title="陆战之王" class="link-hover" target="_blank"><img data-original="https://cdn.aqdstatic.com:966/88ys/upload/vod/2019-08/156684600122655109.jpg" alt="陆战之王" src="/images/npimg.jpg" class="lazy"><span class="video-bg"></span><span class="lzbz"><p class="name">陆战之王</p><p class="actor">陈晓,王雷,吴樾,张雅钦</p><p class="actor">国产剧</p><p class="actor">2019/大陆</p></span><p class="other"><i>更新至38集</i></p></a>
+    <li class="p2 m1  "><a href="/guochanju/201908/64995.html" title="陆战之王" class="link-hover" target="_blank"><img data-original="https://cdn.aqdstatic.com:966/88ys/upload/vod/2019-08/156684600122655109.jpg" alt="陆战之王" src="/static/images/npimg.jpg" class="lazy"><span class="video-bg"></span><span class="lzbz"><p class="name">陆战之王</p><p class="actor">陈晓,王雷,吴樾,张雅钦</p><p class="actor">国产剧</p><p class="actor">2019/大陆</p></span><p class="other"><i>更新至38集</i></p></a>
     </li>
 
     <li class="p2 m1  "><a href="/guochandongman/201908/64903.html" title="斗罗大陆" class="link-hover" target="_blank"><img data-original="https://cdn.aqdstatic.com:966/88ys/upload/vod/2018-01/156463206966589138.jpg" alt="斗罗大陆" src="/images/npimg.jpg" class="lazy"><span class="video-bg"></span><span class="lzbz"><p class="name">斗罗大陆</p><p class="actor">沈磊,程玉珠,黄翔宇,王肖兵,倪康,赵乾景,吴磊,张琦,秦紫翼</p><p class="actor">国产动漫</p><p class="actor">2018/大陆</p></span><p class="other"><i>更新至69集</i></p></a>
@@ -212,7 +155,7 @@
 
 
 </ul>
- </div>
+</div>
 
  <div class="index-tj-r">
  <h2 class="title index-color">2019大片精选</h2><ul>
@@ -460,7 +403,7 @@
 <p>本站所有最新电影资源均来自互联网及网友上传，本站只提供免费在线观看，仅供网吧及个人用户测试带宽使用，版权归原电影公司所有。有问题可发邮件到 88yscc#gmail.com(请将#换成@)</p>
 <p>Copyright @ 2019 88影视网 - www.88ys.cc. All Rights Reserved</p>
 </div>
-<script type="text/javascript" src="https://cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-<script type="text/javascript" src="/template/pc88ysw/ads/pctj.js"></script>
+<script type="text/javascript" src="/static/js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="/static/js/pctj.js"></script>
 </body>
 </html>
